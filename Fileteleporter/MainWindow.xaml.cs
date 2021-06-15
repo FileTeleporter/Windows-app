@@ -22,53 +22,19 @@ namespace Fileteleporter
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string _header;
-        public string Header
-        {
-            get { return _header; }
-            set { _header = value; }
-        }
-        private string _bg1;
-        public string Bg1
-        {
-            get { return _bg1; }
-            set { _bg1 = value; }
-        }
-        private string _bg2;
-        public string Bg2
-        {
-            get { return _bg2; }
-            set { _bg2 = value; }
-        }
-        private string _textColor;
-        public string TextColor
-        {
-            get { return _textColor; }
-            set { _textColor = value; }
-        }
+        private classes.Theme theme;
         public MainWindow()
         {
             bool whiteTheme = Properties.Settings.Default.whiteTheme;
-            LoadTheme(whiteTheme);
             InitializeComponent();
-            this.DataContext = this;
+            this.theme = new classes.Theme(whiteTheme);
+            this.DataContext = this.theme;
         }
-        public void LoadTheme(bool white)
+
+        private void OpenSettings(object sender, MouseButtonEventArgs e)
         {
-            if(white)
-            {
-                Header = "/images/FileTeleporterHeaderLogoWhiteTheme.png";
-                Bg1 = "white" ;
-                Bg2 = "#e6e6e6";
-                TextColor = "black";
-            }
-            else
-            {
-                Header = "/images/FileTeleporterHeaderLogo.png";
-                Bg1 = "#242429";
-                Bg2 = "#2d2d32";
-                TextColor = "white";
-            }
+            dialogs.Settings s = new dialogs.Settings(this.theme);
+            s.Show();
         }
     }
 }

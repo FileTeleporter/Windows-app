@@ -6,11 +6,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="521" Width="476">
     <Grid  Background="{Binding Bg1}">
-        <Grid.Resources>
-            <Style TargetType="Label">
-                <Setter Property="Foreground" Value="{Binding TextColor}"></Setter>
-            </Style>
-        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.1*" Name="colLeft"></ColumnDefinition>
             <ColumnDefinition Width="2*" Name="colMiddle"></ColumnDefinition>
@@ -28,7 +23,7 @@
         <StackPanel Name="SpnlDevices" Grid.Column="1" Grid.Row="1" Background="{Binding Bg2}">
         </StackPanel>
         <DockPanel Grid.Column="1" Grid.Row="2">
-            <Label DockPanel.Dock="Right" HorizontalAlignment="Right">Settings</Label>
+            <Label DockPanel.Dock="Right" HorizontalAlignment="Right" Style="{StaticResource clickableLabel}" MouseDown="OpenSettings">Settings</Label>
         </DockPanel>
     </Grid>
 </Window>

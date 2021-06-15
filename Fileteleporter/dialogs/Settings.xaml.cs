@@ -19,9 +19,10 @@ namespace Fileteleporter.dialogs
     /// </summary>
     public partial class Settings : Window
     {
-        public Settings()
+        public Settings(classes.Theme theme)
         {
             InitializeComponent();
+            this.DataContext = theme;
         }
     }
 }
