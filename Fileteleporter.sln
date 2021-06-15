@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fileteleporter", "Fileteleporter\Fileteleporter.csproj", "{DEA950C4-41BF-465F-B7B9-0B6938026C42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEA950C4-41BF-465F-B7B9-0B6938026C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA950C4-41BF-465F-B7B9-0B6938026C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA950C4-41BF-465F-B7B9-0B6938026C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA950C4-41BF-465F-B7B9-0B6938026C42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BAB02BC-98EB-4441-B36C-773560DB36C9}
+	EndGlobalSection
+EndGlobal
