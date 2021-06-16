@@ -6,10 +6,26 @@
     <UseWPF>true</UseWPF>
     <ApplicationIcon>logo4096-2.ico</ApplicationIcon>
     <StartupObject>Fileteleporter.App</StartupObject>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>signing.snk</AssemblyOriginatorKeyFile>
+    <Authors>Jolan Aklin and Yohan Zbinden</Authors>
+    <Copyright>Jolan Aklin and Yohan Zbinden</Copyright>
+    <Description>A simple file transfer app</Description>
+    <PackageLicenseFile>COPYING</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Fileteleporter/Windows-App</PackageProjectUrl>
+    <AssemblyName />
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Images\FileTeleporterHeaderLogoWhiteTheme.png" />
+    <None Include="COPYING">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,7 +43,7 @@
 
   <ItemGroup>
     <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
